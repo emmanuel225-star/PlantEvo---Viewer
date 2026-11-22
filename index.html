@@ -4,89 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PlanEvo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <a class="logo" href="#accueil">PlanEvo</a>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#algues">Algues</a>
-    <a href="#mousses">Mousses</a>
-    <a href="#fougeres">Fougère</a>
-    <a href="#coniferes">Conifère</a>
-    <a href="#graminees">Graminées</a>
-    <a href="#dicotyledones">Dicotylédones</a>
-  </nav>
-</header>
+  <header class="menu">
+    <a class="logo" href="#accueil">PlanEvo</a>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#algues">Algues</a>
+      <a href="#mousses">Mousses</a>
+      <a href="#fougere">Fougère</a>
+      <a href="#conifere">Conifère</a>
+      <a href="#graminees">Graminées</a>
+      <a href="#dicotyledones">Dicotylédones</a>
+    </nav>
+  </header>
 
-<!-- grid-area: ligne / colonne -->
+  <main>
 
-<section id="accueil">
-  <div class="grid">
-    <a class="card" href="#algues"></a>
-    <a class="card" href="#mousses"></a>
-    <a class="card" href="#fougeres"></a>
-    <a class="card" href="#coniferes"></a>
-    <a class="card" href="#graminees"></a>
-    <a class="card" href="#dicotyledones"></a>
-  </div>
-</section>
+    <!-- ACCUEIL -->
+    <section id="accueil" class="section">
+      <div class="grille grille-accueil">
+        <a class="carte" href="#algues"><img src="images/algues.jpg" alt="Algues vertes dans l’eau"></a>
+        <a class="carte" href="#mousses"><img src="images/m.jpg" alt="Mousse sur un tronc"></a>
+        <a class="carte" href="#fougere"><img src="images/f.jpg" alt="Fougère"></a>
+        <a class="carte" href="#conifere"><img src="images/conifere.jpg" alt="Branche de conifère"></a>
+        <a class="carte" href="#graminees"><img src="images/gr.jpg" alt="Graminées dans une prairie"></a>
+        <a class="carte" href="#dicotyledones"><img src="images/Dico.jpg" alt="Fruits orange d’une dicotylédone"></a>
+      </div>
+    </section>
 
-<section id="algues">
-  <div class="grid">
-    <div class="card" style="grid-area: 1 / 1"></div>
-    <div class="card" style="grid-area: 1 / 3"></div>
-    <div class="card" style="grid-area: 3 / 1"></div>
-  </div>
-  <a class="retour" href="#accueil">Retour à l'accueil</a>
-</section>
+    <!-- ALGUES -->
+    <section id="algues" class="section">
+      <div class="grille">
+        <div class="carte"><img src="images/algues1.jpg" alt="Algues vertes en gros plan"></div>
+        <div class="carte"><img src="images/algues2.jpg" alt="Branche couverte de mousse verte"></div>
+        <div class="carte"><img src="images/algues3.jpg" alt="Algues brunes et vertes sur la rive"></div>
+        <div class="carte schema"><img src="images/reproduction_des_algues_241_orig.jpg" alt="Schéma de la reproduction des algues"></div>
+      </div>
+      <a class="retour" href="#accueil">Retour à l’accueil</a>
+    </section>
 
-<section id="mousses">
-  <div class="grid">
-    <div class="card" style="grid-area: 1 / 1"></div>
-    <div class="card" style="grid-area: 2 / 2"></div>
-    <div class="card" style="grid-area: 3 / 3"></div>
-  </div>
-  <a class="retour" href="#accueil">Retour à l'accueil</a>
-</section>
+    <!-- MOUSSES -->
+    <section id="mousses" class="section">
+      <div class="grille">
+        <div class="carte"><img src="images/m1.jpg" alt="Tapis de mousse avec une bogue de châtaigne"></div>
+        <div class="carte"><img src="images/m2.jpg" alt="Mousse en gros plan"></div>
+        <div class="carte"><img src="images/m3.jpg" alt="Forêt dont le sol est couvert de mousse"></div>
+        <div class="carte schema"><img src="images/life-cycle.png" alt="Schéma du cycle de vie d’une mousse"></div>
+      </div>
+      <a class="retour" href="#accueil">Retour à l’accueil</a>
+    </section>
 
-<section id="fougeres">
-  <div class="grid">
-    <div class="card" style="grid-area: 1 / 1"></div>
-    <div class="card" style="grid-area: 1 / 3"></div>
-    <div class="card" style="grid-area: 2 / 2"></div>
-  </div>
-  <a class="retour" href="#accueil">Retour à l'accueil</a>
-</section>
+    <!-- FOUGÈRE -->
+    <section id="fougere" class="section">
+      <div class="grille">
+        <div class="carte"><img src="images/f1.jpg" alt="Fougères en sous-bois"></div>
+        <div class="carte"><img src="images/f2.jpg" alt="Gros plan sur une fronde de fougère"></div>
+        <div class="carte"><img src="images/f3.jpg" alt="Fougères autour d’un tronc mort"></div>
+        <div class="carte schema"><img src="images/reproduction_de_la_fougere_420_orig.jpg" alt="Schéma de la reproduction des fougères"></div>
+      </div>
+      <a class="retour" href="#accueil">Retour à l’accueil</a>
+    </section>
 
-<section id="coniferes">
-  <div class="grid">
-    <div class="card" style="grid-area: 1 / 3"></div>
-    <div class="card" style="grid-area: 2 / 2"></div>
-    <div class="card" style="grid-area: 3 / 1"></div>
-  </div>
-  <a class="retour" href="#accueil">Retour à l'accueil</a>
-</section>
+    <!-- CONIFÈRE -->
+    <section id="conifere" class="section">
+      <div class="grille">
+        <div class="carte"><img src="images/conifere2.jpg" alt="Rameaux d’épicéa bleu"></div>
+        <div class="carte"><img src="images/conifere3.jpg" alt="Jeunes épicéas"></div>
+        <div class="carte"><img src="images/conifere.jpg" alt="Branche de conifère"></div>
+        <div class="carte schema schema-noir"><img src="images/IMG_1607-774x1024.jpeg" alt="Schéma du cycle des conifères"></div>
+      </div>
+      <a class="retour" href="#accueil">Retour à l’accueil</a>
+    </section>
 
-<section id="graminees">
-  <div class="grid">
-    <div class="card" style="grid-area: 1 / 1"></div>
-    <div class="card" style="grid-area: 1 / 3"></div>
-    <div class="card" style="grid-area: 3 / 3"></div>
-  </div>
-  <a class="retour gauche" href="#accueil">Retour à l'accueil</a>
-</section>
+    <!-- GRAMINÉES -->
+    <section id="graminees" class="section">
+      <div class="grille">
+        <div class="carte"><img src="images/gr.jpg" alt="Graminées dans une prairie"></div>
+        <div class="carte"><img src="images/Gr3.jpg" alt="Roseaux secs"></div>
+        <div class="carte"><img src="images/Gr1.jpg" alt="Brins d’herbe couverts de rosée"></div>
+        <!-- Schéma de la fleur de graminée : dépose le fichier dans images/ sous ce nom -->
+        <div class="carte schema"><img src="images/graminees-schema.jpg" alt="Schéma d’une fleur de graminée"></div>
+      </div>
+      <a class="retour" href="#accueil">Retour à l’accueil</a>
+    </section>
 
-<section id="dicotyledones">
-  <div class="grid">
-    <div class="card" style="grid-area: 1 / 1"></div>
-    <div class="card" style="grid-area: 2 / 1"></div>
-    <div class="card" style="grid-area: 1 / 3"></div>
-  </div>
-  <a class="retour" href="#accueil">Retour à l'accueil</a>
-</section>
+    <!-- DICOTYLÉDONES -->
+    <section id="dicotyledones" class="section">
+      <div class="grille">
+        <div class="carte"><img src="images/Dico1.jpg" alt="Grappe de fruits rouges"></div>
+        <div class="carte"><img src="images/dico2.jpg" alt="Potager de tomates"></div>
+        <div class="carte"><img src="images/Lamium_album__1_.JPG" alt="Fleurs blanches de lamier"></div>
+        <div class="carte schema"><img src="images/schema_cycle_de_vie_d_une_plante_a_fleur_35_2_orig.jpg" alt="Schéma du cycle de vie d’une plante à fleur"></div>
+      </div>
+      <a class="retour" href="#accueil">Retour à l’accueil</a>
+    </section>
+
+  </main>
 
 </body>
 </html>

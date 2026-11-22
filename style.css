@@ -1,95 +1,132 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ---------- Base ---------- */
+:root {
+  --vert-menu: #10281a;
+  --texte-menu: #f3efe4;
+  --gris-bouton: #dcdcdc;
+  --rayon: 28px;
+  --hauteur-menu: 76px;
 }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--hauteur-menu);
 }
+
 body {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  background: #11291a; /* couleur de secours si l'image ne charge pas */
+  font-family: "Inter", Arial, sans-serif;
+  /* Si fond.jpg est absent, le dégradé s'affiche à la place */
+  background:
+    url("images/fond.jpg") center / cover fixed no-repeat,
+    linear-gradient(180deg, #4a5a2a 0%, #2c3a1e 55%, #3b2a1d 100%) fixed;
+  color: #111;
 }
 
-/* Image de fond unique, fixe, qui remplit tout le site */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: url(fond.jpg) center / cover no-repeat;
-}
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-/* En-tête */
-header {
+/* ---------- Menu ---------- */
+.menu {
   position: sticky;
   top: 0;
   z-index: 10;
+  min-height: var(--hauteur-menu);
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 8px 32px;
-  padding: 14px 24px;
-  background: #11291a;
-}
-header a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-}
-header .logo {
-  font-size: 32px;
-}
-nav {
-  display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
+  gap: 12px 40px;
+  padding: 10px 28px;
+  background: var(--vert-menu);
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  color: var(--texte-menu);
 }
 
-/* Sections : même largeur et mêmes marges partout, fond transparent */
-section {
+.menu a { color: inherit; text-decoration: none; }
+
+.logo { font-size: 2.2rem; letter-spacing: 0.02em; }
+
+.menu nav { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+
+.menu nav a {
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.menu nav a:hover,
+.menu nav a:focus-visible { border-bottom-color: var(--texte-menu); outline: none; }
+
+/* ---------- Sections ---------- */
+.section {
+  min-height: calc(100vh - var(--hauteur-menu));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 48px 5vw;
+}
+
+/* ---------- Grilles de cartes ---------- */
+.grille {
+  width: 100%;
   max-width: 1100px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 32px;
-  scroll-margin-top: 70px;
-}
-
-/* Grille 3 colonnes, cases identiques (accueil et pages de détail) */
-.grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: clamp(140px, 22vh, 240px);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
 }
 
-/* Cartes grises : toutes de la même taille */
-.card {
-  background: #d9d9d9;
-  border-radius: 20px;
-}
+.grille-accueil { grid-template-columns: repeat(3, 1fr); max-width: 1250px; }
 
-/* Bouton retour, aligné sous la grille */
-.retour {
+.carte {
   display: block;
-  width: max-content;
-  margin: 24px 0 0 auto;
-  padding: 8px 18px;
-  border-radius: 999px;
-  background: #e4e4e4;
-  color: #222;
-  font: 14px Arial, sans-serif;
-  text-decoration: none;
-}
-.retour.gauche {
-  margin-left: 0;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--rayon);
+  overflow: hidden;
+  background: #fff;
 }
 
-/* Mobile : une colonne */
-@media (max-width: 800px) {
-  section { padding: 24px 16px; }
-  .grid { grid-template-columns: 1fr; }
-  .card { grid-area: auto !important; }
+a.carte { transition: transform 0.2s; }
+a.carte:hover,
+a.carte:focus-visible { transform: scale(1.02); outline: 3px solid var(--texte-menu); }
+
+/* Schémas : on voit tout le dessin, sans rognage */
+.schema img { object-fit: contain; background: #fff; }
+.schema-noir img { background: #000; }
+
+/* ---------- Bouton retour ---------- */
+.retour {
+  padding: 12px 40px;
+  border-radius: 999px;
+  background: var(--gris-bouton);
+  color: #111;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: background 0.2s;
+}
+
+.retour:hover,
+.retour:focus-visible { background: #fff; outline: none; }
+
+/* ---------- Tablette et mobile ---------- */
+@media (max-width: 900px) {
+  .grille-accueil { grid-template-columns: repeat(2, 1fr); }
+  .menu nav a { font-size: 1.25rem; }
+}
+
+@media (max-width: 600px) {
+  .grille,
+  .grille-accueil { grid-template-columns: 1fr; gap: 20px; }
+  .menu { padding: 10px 16px; }
+  .menu nav { gap: 6px 18px; }
+  .menu nav a { font-size: 1.1rem; }
+  .logo { font-size: 1.8rem; }
+  .section { padding: 32px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  a.carte, .retour, .menu nav a { transition: none; }
 }
