@@ -28,8 +28,8 @@ planevo/
 ├── style.css
 ├── README.md
 └── images/
-    ├── fond.jpg                 (à ajouter)
-    ├── graminees-schema.jpg     (à ajouter)
+    ├── fond.jpg                 
+    ├── graminees-schema.jpg     
     └── ... photos et schémas
 ```
 
