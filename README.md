@@ -2,7 +2,7 @@
 
 Site statique sur l'évolution et la reproduction des grands groupes de végétaux : algues, mousses, fougères, conifères, graminées et dicotylédones. Il est réalisé en HTML et CSS à partir d'une maquette Figma, sans JavaScript ni framework.
 
-**Auteur :** Eliakhym
+**Auteur :** Emmanuel Touré
 
 ## Aperçu
 
