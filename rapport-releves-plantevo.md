@@ -1,6 +1,6 @@
 # Relevés de terrain PlantEvo : répartition de groupes de végétaux selon le milieu
 
-**Auteurs :** …
+**Auteurs :** Emmmanuel Touré
 **Relevés menés par :** Emmanuel Touré
 **Date des relevés :** 21 novembre 2026
 **Zone d'étude :** … (centre des relevés : 6,8927° N, 5,2254° O)
@@ -15,7 +15,7 @@ Localiser, identifier et photographier un représentant de chacun des groupes de
 
 ### Zone d'étude
 
-- **Lieu :** …
+- **Lieu :** INPHB - NORD
 - **Coordonnées approximatives du centre :** 6,8927° N, 5,2254° O
 - **Emprise des relevés :** environ 660 m (nord-sud) sur 120 m (est-ouest)
 - **Milieux présents :** milieu sec et milieu humide (les deux catégories utilisées dans le formulaire)
@@ -32,7 +32,7 @@ Localiser, identifier et photographier un représentant de chacun des groupes de
 
 ### Application
 
-- **Nom :** KoboToolbox, formulaire « Brief Projet – PlantEvo » (saisies envoyées via le web)
+- **Nom :** KoboToolbox, formulaire « Brief Projet – PlantEvo » 
 - **Version et réglages :** …
 
 ### Protocole de relevé
